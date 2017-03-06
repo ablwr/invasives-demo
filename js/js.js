@@ -94,3 +94,9 @@ $('#magic').click(function(){
     });
   });
 })
+
+$('#more').click(function(){
+  $('img').each(function(){
+    $(this).clone().appendTo('#container')
+  });
+})
