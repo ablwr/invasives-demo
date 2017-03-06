@@ -68,6 +68,7 @@ $('#more_wind').click(function(){
 
 $('#less_wind').click(function(){
   $('img').each(function(){
+    src = $(this).attr('src')
     $(this).css({
       'animation-name': 'animateBubble, less_sideWays'
     });
@@ -78,6 +79,18 @@ $('#wind').click(function(){
   $('img').each(function(){
     $(this).css({
       'animation-name': 'animateBubble, sideWays'
+    });
+  });
+})
+
+$('#magic').click(function(){
+  $('img').each(function(){
+    color = ['MediumOrchid','SlateBlue','Green','Salmon','Gold']
+    src = $(this).attr('src')
+    $(this).css({
+      'background-color': color[Math.floor((Math.random() * color.length))],
+      'mask-image': 'url(' + src + ')',
+      'filter': 'blur(3px)'
     });
   });
 })
