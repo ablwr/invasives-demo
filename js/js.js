@@ -90,7 +90,16 @@ $('#magic').click(function(){
     $(this).css({
       'background-color': color[Math.floor((Math.random() * color.length))],
       'mask-image': 'url(' + src + ')',
-      'filter': 'blur(3px)'
+      'mask-position': 'center center'
+    });
+  });
+})
+
+$('#opacity').click(function(){
+  $('img').each(function(){
+    num = Math.floor((Math.random() * 9) + 1);
+    $(this).css({
+      'opacity': '0.' + num
     });
   });
 })
